@@ -1,176 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-</head>
-<body>
-    <style>
-        body{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-
-        }
-        .TItle{
-            text-align: center;
-        }
-        .TItle h1{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: rgb(56, 55, 55);
-        }
-        .inputField{
-            margin-top:50px;
-            
-            justify-content: center;
-            display: flex;
-        }
-        .InputField-Container{
-          /* width: 30%; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-        .InputField-Container input{
-            width: 400px;
-             padding: 3px 10px;
-            height: 50px;
-            font-size: 1rem;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            outline-color: none;
-           
-        }
-        button{
-            height: 60px;
-            width: 150px;
-            position: relative;
-            color: rgb(255, 255, 255);
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-            background-color: rgb(1, 155, 14);
-        }
-        button:hover{
-            opacity: .6;
-        }
-
-
-.search-results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.search-result {
-  margin-bottom: 60px;
-  width: 30%;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.search-result:hover img {
-  transform: scale(1.05);
-}
-
-.search-result img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-.search-result a {
-  padding: 10px;
-  display: block;
-  color: #333;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.search-result:hover a {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-#show-more-button {
-  background-color: #008cba;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  display: none;
-}
-
-#show-more-button:hover {
-  background-color: #0077b5;
-}
-
-@media screen and (max-width: 768px) {
-  .search-result {
-    width: 45%;
-  }
-}
-    </style>
-    <div class="TItle">
-        <h1>Find image search</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Search App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>find gallery</h1>
+    <form>
+      <input type="text" id="search-input" placeholder="Search for images..." />
+      <button id="search-button">Search</button>
+    </form>
+    <div class="search-results">
+      <!-- <div class="search-result">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+          alt="image"
+        />
+        <a
+          href="https://unsplash.com/photos/g-7X6T7vAI4"
+          target="_blank"
+          rel="noopener noreferrer"
+          >an image of a beach</a
+        >
+      </div>
+      <div class="search-result">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+          alt="image"
+        />
+        <a
+          href="https://unsplash.com/photos/g-7X6T7vAI4"
+          target="_blank"
+          rel="noopener noreferrer"
+          >an image of a beach</a
+        >
+      </div>
+      <div class="search-result">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
+          alt="image"
+        />
+        <a
+          href="https://unsplash.com/photos/g-7X6T7vAI4"
+          target="_blank"
+          rel="noopener noreferrer"
+          >an image of a beach</a
+        >
+      </div> -->
     </div>
-   <div class="inputField">
-    <div class="InputField-Container">
-        <form action="">
-           <input type="text" name="text" id="search" placeholder="Enter keyword...">
-           <button id="searchBtn">Search</button>
-        </form>
-    </div>
-   </div>
-   <div class="search-results">
-    <!-- <div class="search-result">
-      <img
-        src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
-        alt="image"
-      />
-      <a
-        href="https://unsplash.com/photos/g-7X6T7vAI4"
-        target="_blank"
-        rel="noopener noreferrer"
-        >an image of a beach</a
-      >
-    </div>
-    <div class="search-result">
-      <img
-        src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
-        alt="image"
-      />
-      <a
-        href="https://unsplash.com/photos/g-7X6T7vAI4"
-        target="_blank"
-        rel="noopener noreferrer"
-        >an image of a beach</a
-      >
-    </div>
-    <div class="search-result">
-      <img
-        src="https://plus.unsplash.com/premium_photo-1664361480561-3bdcd6eb3b6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60"
-        alt="image"
-      />
-      <a
-        href="https://unsplash.com/photos/g-7X6T7vAI4"
-        target="_blank"
-        rel="noopener noreferrer"
-        >an image of a beach</a
-      >
-    </div> -->
-  </div>
-  <button id="show-more-button">Show more</button>
-  <script src="index.js"></script>
-</body>
+    <button id="show-more-button">Show more</button>
+    <script src="index.js"></script>
+  </body>
 </html>
